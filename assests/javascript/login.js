@@ -30,7 +30,11 @@ $( document ).ready(function() {
   });
   // adding singup button listener
   signupBtn.on("click", function () {
+    const email = emailTxt.val();
+    const pass = passTxt.val();
+    const auth = firebase.auth();
 
+    auth.signInWithEmailAndPassword(email, pass);
 
   });
 
