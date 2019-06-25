@@ -34,8 +34,22 @@ $( document ).ready(function() {
     const pass = passTxt.val();
     const auth = firebase.auth();
 
-    auth.signInWithEmailAndPassword(email, pass);
+    auth.createUserWithEmailAndPassword(email, pass);
 
   });
 
+
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+        console.log(firebaseUser)
+    }
+    else {
+        console.log("not-signed-in!")
+    }
+
+  });
+
+
+
+  
 });
