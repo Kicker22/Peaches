@@ -1,10 +1,14 @@
+
+
 .userImg{
     background: gray;
+    border: 1px solid black;
 }
 
 .individual{
-    float: left;
+    margin: 0;
     width: fit-content;
+    border: 1px solid black;
 }
 
 .profilePic{
@@ -23,8 +27,6 @@
 .current-stats{
     height: fit-content;
     width: fit-content;
-    display: flex;
-    justify-content: space-evenly;
     margin: 0;
     border: 1px solid black;
 }
@@ -39,8 +41,10 @@
     border: 1px solid black;
     display: inline-block;
 }
-.userWorkouts-row{
-    background: gray;
+.added-workouts{
     clear: both;
+}
+.container{
+    border: 1px solid black;
 }
 
