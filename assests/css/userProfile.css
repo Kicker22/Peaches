@@ -1,3 +1,7 @@
+.content-container{
+    border: 1px solid black;
+    height: 980px;
+}
 .userImg{
     background: gray;
 }
@@ -38,9 +42,5 @@
 .current-stats-col div{
     border: 1px solid black;
     display: inline-block;
-}
-.userWorkouts-row{
-    background: gray;
-    clear: both;
 }
 
