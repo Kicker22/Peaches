@@ -1,5 +1,4 @@
 
-
 $(".submit-button").on('click' ,function(event){
     event.preventDefault()
     var search = $("#recipes").val()
