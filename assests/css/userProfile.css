@@ -1,0 +1,50 @@
+
+
+.userImg{
+    background: gray;
+    border: 1px solid black;
+}
+
+.individual{
+    margin: 0;
+    width: fit-content;
+    border: 1px solid black;
+}
+
+.profilePic{
+    background: gray;
+    width: 200px;
+    height: 200px;
+    float: left;
+} 
+
+.userName, .date-joined, .userQuote{
+    float: left;
+    clear: both;
+
+}
+
+.current-stats{
+    height: fit-content;
+    width: fit-content;
+    margin: 0;
+    border: 1px solid black;
+}
+
+
+#curentW , #goalW, #startW, #weightDiff{
+    display: block;
+
+}
+
+.current-stats-col div{
+    border: 1px solid black;
+    display: inline-block;
+}
+.added-workouts{
+    clear: both;
+}
+.container{
+    border: 1px solid black;
+}
+
