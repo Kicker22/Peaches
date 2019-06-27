@@ -24,13 +24,9 @@ $( document ).ready(function() {
 
     const email = emailTxt.val();
     const password = passTxt.val();
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-        console.log(errorCode);
-        console.log(errorMessage);
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+      window.location.replace("userdata.html");
+
       });
   });
   // adding singup button listener
@@ -38,14 +34,9 @@ $( document ).ready(function() {
     const email = emailTxt.val();
     const password = passTxt.val();
 
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        console.log(errorCode);
-        
-        var errorMessage = error.message;
-        console.log(errorMessage);
-        // ...
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
+      window.location.replace("userdata.html");
+
       });
 
   });

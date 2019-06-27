@@ -10,16 +10,31 @@
     <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-firestore.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assests/css/navBar.css">
+    <link rel="stylesheet" href="assests/css/loginpage.css">
+
   </head>
   <body>
       
+    <div class="navbar navbar-container mb-5 py-0">
+      <div class=" brand "><img src="./assests/images/peach.png" height="50px" alt="">Peach </div>
+    <div class="navbar-link">
+        <div class="navbar-items">
+            <a class=" nav-items profile-link" href="http://">Profile</a>
+            <a class=" nav-items search-link" href="./Portfolio.html">Workouts</a>
+            <a class=" nav-items home-link" href="http://">Home</a>
+        </div>
+    </div>
+  </div>
+
       <div class="container">
 
         <div class="card text-left">
           <img class="card-img-top" src="holder.js/100px180/" alt="">
           <div class="card-body">
-            <h4 class="card-title">Login</h4>
+            <h4 class="card-title" id="logincss">Login</h4>
             <p class="card-text"></p>
             <div class="form-group">
               <label for="username">Email</label>
