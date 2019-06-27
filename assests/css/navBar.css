@@ -8,13 +8,14 @@
 .brand{
     color: whitesmoke;
     font-size: 48px;
+    font-family: 'Rubik Mono One', sans-serif;
 }
 .brand{
     text-shadow:
-	    -1px -1px 0 gray,
-		1px -1px 0 gray,
-		-1px 1px 0 gray,
-		1px 1px 0 gray;
+	    -1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
 }
     
    
@@ -24,6 +25,7 @@
     padding: 15px;
     margin-right: 5px;
     color: white;
+    font-family: 'Rubik Mono One', sans-serif;
 }
 .nav-items{
     text-shadow:
@@ -38,6 +40,7 @@
     box-shadow: 2px 3px darkgray;
     color: white;
     animation: glow 2s infinite alternate;
+    font-family: 'Rubik Mono One', sans-serif;
 }
 @keyframes glow{
     from{
