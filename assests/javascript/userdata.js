@@ -1,16 +1,17 @@
 
 // Firebase goes here
 var firebaseConfig = {
-    apiKey: "AIzaSyDNkPIYCwuYptD01RHymGZ01dlrCo-N2ts",
-    authDomain: "peach-104be.firebaseapp.com",
-    databaseURL: "https://peach-104be.firebaseio.com",
-    projectId: "peach-104be",
-    storageBucket: "peach-104be.appspot.com",
-    messagingSenderId: "587739641952",
-    appId: "1:587739641952:web:edc84b1675374132"
-  };
-  
-  firebase.initializeApp(firebaseConfig);
+  apiKey: "AIzaSyDNkPIYCwuYptD01RHymGZ01dlrCo-N2ts",
+  authDomain: "peach-104be.firebaseapp.com",
+  databaseURL: "https://peach-104be.firebaseio.com",
+  projectId: "peach-104be",
+  storageBucket: "peach-104be.appspot.com",
+  messagingSenderId: "587739641952",
+  appId: "1:587739641952:web:edc84b1675374132"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 
 
 
@@ -23,3 +24,21 @@ var edamam = "https://api.edamam.com/search?q=chicken&app_id=ef658656&app_key=74
 var questions ={
     
 }
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    // ...
+  } else {
+    // User is signed out.
+    window.location.replace("login.html");
+
+  }
+});
