@@ -55,7 +55,7 @@ $( document ).ready(function() {
       // ...
     } else {
       // User is signed out.
-      // ...
+
     }
   });
 
