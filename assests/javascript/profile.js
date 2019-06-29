@@ -3,15 +3,6 @@ $(".submit-button").on('click', function (event) {
     event.preventDefault()
     // this code adds a container for the for loop recipie item before the loop runs 
     // this way their is an individual container div for each recipe.
-    var listDiv = $('<div>')
-    listDiv.addClass('mainList')
-    $('#recipeList').append(listDiv)
-
-    var titleDiv = $('<div>')
-    titleDiv.addClass("title")
-    var p = $('<p>')
-    p.attr("id","pTitle")
-    titleDiv.append(p)
 
     // this block grab user input from the text box... this is then used to search the API
     var search = $("#recipes").val()
@@ -30,21 +21,36 @@ $(".submit-button").on('click', function (event) {
 
             // this block adds list items from object array
             // and displays them on individual lines inside of the listDiv 
+
+            var listDiv = $('<div>')
+           
+            listDiv.addClass('mainList')
+            $('#recipeList').append(listDiv)
+
             for (let i = 0; i < searchResponse.length; i++) {
+                var p = $('<p>')
+                p.attr("id", "pTitle")
 
                 console.log(searchResponse)
                 var recipeName = searchResponse[i].recipe.label
                 var recipe = searchResponse[i].recipe.ingredients
+                var p = $('<p>')
+
+                p.attr("id", "pTitle")
+                p.text(recipeName)
+                listDiv.append(p)
+
                 var label = $('<ul>')
-                label.addClass("recipeLabel")
-                label.text(recipeName)
-                label.attr("id", "recipe_" + i)
-                $(listDiv).append(label)
+                $(listDiv.append(label))
+
+
+                
                 console.log(recipe)
                 for (let j = 0; j < recipe.length; j++) {
                     var newLi = $('<li>')
                     newLi.text(recipe[j].text)
-                    $("#recipe_" + i).append(newLi)
+                    label.append(newLi)
+                    $(".recipeLabel").append(listDiv)
                 }
 
             }
