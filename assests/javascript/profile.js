@@ -1,4 +1,4 @@
-
+var searchArr = [];
 $(".submit-button").on('click' ,function(event){
     event.preventDefault()
     var search = $("#recipes").val()
@@ -15,9 +15,13 @@ $(".submit-button").on('click' ,function(event){
         
         var newDiv = $('<div>')
         newDiv.addClass('recipe-list')
-        newDiv.text() = searchResponse[i].text
-        var searchResponse = response.hits[0].recipe.ingredients;
-        console.log(searchResponse[i].text)
+        var searchResponse = response.hits[0].recipe.ingredientLines;
+        newDiv.text(searchResponse)
+        console.log(searchResponse)
+        for(i =0; i < searchResponse.length; i++){
+            searchArr.push(searchResponse[i])
+        }
+        console.log(searchArr)
     });
 })
 
