@@ -1,6 +1,6 @@
 .content-container{
     border: 1px solid black;
-    height: 980px;
+    height: fit-content;
 }
 .userImg{
     background: gray;
@@ -43,4 +43,11 @@
     border: 1px solid black;
     display: inline-block;
 }
+.recipes-list{
+    height: fit-content;
+    border: 1px solid black;
+}
+ .mainList{
+     border: 1px solid black;
+ }
 
