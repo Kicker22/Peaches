@@ -23,9 +23,10 @@ $(".submit-button").on('click', function (event) {
             for (let i = 0; i < searchResponse.length; i++) {
                 var listDiv = $('<div>')
                 var p = $('<p>')
-                
-           
+
+
                 listDiv.addClass('mainList')
+                listDiv.fadeOut(0)
                 $('#recipeList').append(listDiv)
                 p.attr("id", "pTitle")
                 
@@ -33,29 +34,30 @@ $(".submit-button").on('click', function (event) {
                 var recipe = searchResponse[i].recipe.ingredients
                 var recipeImg = searchResponse[i].recipe.image
                 var image = $("<img src='" + recipeImg + "'>")
-
+                
                 p.attr("id", "pTitle")
                 p.text(recipeName)
-                listDiv.attr('id','list_' + i )
+                listDiv.attr('id', 'list_' + i)
                 listDiv.append(p)
                 listDiv.append(image)
-
+                
                 var label = $('<ul>')
-                $(listDiv.append(label))
-
+                $(listDiv).append(label)
+                
                 for (let j = 0; j < recipe.length; j++) {
                     var newLi = $('<li>')
                     newLi.text(recipe[j].text)
                     label.append(newLi)
                     $(".recipeLabel").append(listDiv)
                 }
+                listDiv.fadeIn(1000)
+                
 
             }
             // var label = $('<div>')
             // label.addClass("recipeLabel")
             // label.text(recipeName)
             // $(listDiv).prepend(label)
-
 
         });
 })
