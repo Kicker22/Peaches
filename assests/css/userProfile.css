@@ -1,54 +1,36 @@
 .content-container{
-    border: 1px solid black;
     height: fit-content;
-}
-.userImg{
-    background: gray;
-    border: 1px solid black;
-}
-
-.individual{
-    margin: 0;
-    width: fit-content;
-    border: 1px solid black;
-}
-
-.profilePic{
-    background: gray;
-    width: 200px;
-    height: 200px;
-    float: left;
-} 
-
-.userName, .date-joined, .userQuote{
-    float: left;
     clear: both;
-
 }
-
-.current-stats{
-    height: fit-content;
+.userRecipes{
     width: fit-content;
     margin: 0;
-    border: 1px solid black;
+    
 }
-
-
-#curentW , #goalW, #startW, #weightDiff{
-    display: block;
-
+header{
+    float: left;
+    width: fit-content;
+    margin: 0;
 }
-
-.current-stats-col div{
-    border: 1px solid black;
-    display: inline-block;
+.form-group{
+    float: right;
 }
 .recipes-list{
     height: fit-content;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
  .recipeLabel{
      border: 1px solid black;
     
+ }
+
+ ul{
+     border: 1px solid black;
+ }
+
+ 
+ #pTitle{
+     margin-top: 1rem;
+     border: 1px solid red
  }
 

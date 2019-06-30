@@ -17,19 +17,18 @@ $(".submit-button").on('click', function (event) {
         .then(function (response) {
             var searchResponse = response.hits
 
-            // this block adds a label to the top of the recipe
-
             // this block adds list items from object array
             // and displays them on individual lines inside of the listDiv 
-
-            var listDiv = $('<div>')
-           
-            listDiv.addClass('mainList')
-            $('#recipeList').append(listDiv)
-
             for (let i = 0; i < searchResponse.length; i++) {
+                var listDiv = $('<div>')
+           
+                listDiv.addClass('mainList')
+                $('#recipeList').append(listDiv)
+                
                 var p = $('<p>')
+
                 p.attr("id", "pTitle")
+
 
                 console.log(searchResponse)
                 var recipeName = searchResponse[i].recipe.label
@@ -38,6 +37,7 @@ $(".submit-button").on('click', function (event) {
 
                 p.attr("id", "pTitle")
                 p.text(recipeName)
+                listDiv.attr('id','list_' + i )
                 listDiv.append(p)
 
                 var label = $('<ul>')
