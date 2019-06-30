@@ -1,12 +1,11 @@
+body{
+    background-image: url(../../assests/images/leaves.png)
+}
 .content-container{
     height: fit-content;
     clear: both;
 }
-.userRecipes{
-    width: fit-content;
-    margin: 0;
-    
-}
+
 header{
     float: left;
     width: fit-content;
@@ -15,22 +14,46 @@ header{
 .form-group{
     float: right;
 }
-.recipes-list{
-    height: fit-content;
-    /* border: 1px solid black; */
-}
- .recipeLabel{
-     border: 1px solid black;
-    
- }
 
- ul{
-     border: 1px solid black;
- }
+#recipeList{
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+
+
+.mainList{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    background: white;
+}
 
  
- #pTitle{
-     margin-top: 1rem;
-     border: 1px solid red
- }
+#pTitle{
+font-size: 36px;
+ color: white;
+ margin-top: 0;
+ height: fit-content;
+ background:rgb(203, 245, 158);
+ text-align: center;
+ box-shadow: 0px 2px 3px black;
+}
+
+#pTitle{
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+img{
+ box-shadow: 2px 2px 4px black;
+ margin-left: .5rem;
+ margin-bottom: .5rem;
+}
 

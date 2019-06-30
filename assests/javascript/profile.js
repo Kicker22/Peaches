@@ -16,36 +16,33 @@ $(".submit-button").on('click', function (event) {
 
         .then(function (response) {
             var searchResponse = response.hits
+            console.log(searchResponse)
 
             // this block adds list items from object array
             // and displays them on individual lines inside of the listDiv 
             for (let i = 0; i < searchResponse.length; i++) {
                 var listDiv = $('<div>')
+                var p = $('<p>')
+                
            
                 listDiv.addClass('mainList')
                 $('#recipeList').append(listDiv)
-                
-                var p = $('<p>')
-
                 p.attr("id", "pTitle")
-
-
-                console.log(searchResponse)
+                
                 var recipeName = searchResponse[i].recipe.label
                 var recipe = searchResponse[i].recipe.ingredients
-                var p = $('<p>')
+                var recipeImg = searchResponse[i].recipe.image
+                var image = $("<img src='" + recipeImg + "'>")
 
                 p.attr("id", "pTitle")
                 p.text(recipeName)
                 listDiv.attr('id','list_' + i )
                 listDiv.append(p)
+                listDiv.append(image)
 
                 var label = $('<ul>')
                 $(listDiv.append(label))
 
-
-                
-                console.log(recipe)
                 for (let j = 0; j < recipe.length; j++) {
                     var newLi = $('<li>')
                     newLi.text(recipe[j].text)
