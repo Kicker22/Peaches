@@ -1,54 +1,59 @@
+body{
+    background-image: url(../../assests/images/leaves.png)
+}
 .content-container{
-    border: 1px solid black;
     height: fit-content;
-}
-.userImg{
-    background: gray;
-    border: 1px solid black;
-}
-
-.individual{
-    margin: 0;
-    width: fit-content;
-    border: 1px solid black;
-}
-
-.profilePic{
-    background: gray;
-    width: 200px;
-    height: 200px;
-    float: left;
-} 
-
-.userName, .date-joined, .userQuote{
-    float: left;
     clear: both;
-
 }
 
-.current-stats{
-    height: fit-content;
+header{
+    float: left;
     width: fit-content;
     margin: 0;
-    border: 1px solid black;
+}
+.form-group{
+    float: right;
 }
 
-
-#curentW , #goalW, #startW, #weightDiff{
-    display: block;
-
-}
-
-.current-stats-col div{
-    border: 1px solid black;
-    display: inline-block;
-}
-.recipes-list{
+#recipeList{
     height: fit-content;
-    border: 1px solid black;
+    width: fit-content;
+    margin: 0 auto;
 }
- .recipeLabel{
-     border: 1px solid black;
-    
- }
+
+
+
+.mainList{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    background: white;
+}
+
+ 
+#pTitle{
+font-size: 36px;
+ color: white;
+ margin-top: 0;
+ height: fit-content;
+ background:rgb(203, 245, 158);
+ text-align: center;
+ box-shadow: 0px 2px 3px black;
+}
+
+#pTitle{
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+img{
+ box-shadow: 2px 2px 4px black;
+ margin-left: .5rem;
+ margin-bottom: .5rem;
+}
 
