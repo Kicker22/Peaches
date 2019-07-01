@@ -7,6 +7,7 @@ body{
 }
 
 header{
+    font-family: 'Dancing Script', cursive;
     float: left;
     width: fit-content;
     margin: 0;
@@ -16,7 +17,7 @@ header{
 }
 
 #recipeList{
-    display: flex;
+   display: inline;
     height: fit-content;
     margin: 0 auto;
 }
@@ -24,35 +25,34 @@ header{
 
 
 .mainList{
-    width: 100%;
+    overflow: auto;
     margin: 0 auto;
-    margin-right: 1rem;
-    border: 1px solid black;
+    margin-right: 2rem;
+    border: 1rem solid  rgb(243, 251, 229);
+    border-radius: 5px;
+    box-shadow: 8px 8px 15px gray;
     margin-bottom: 2rem;
     background: white;
 }
 
  
 #pTitle{
-font-size: 36px;
- color: white;
- margin-top: 0;
+ font-size: 36px;
+ color:black;
+ margin-top: 1rem;
+ margin-bottom: 2rem;
  height: fit-content;
- background:rgb(203, 245, 158);
+ /* background:rgb(237, 250, 215); */
  text-align: center;
- box-shadow: 0px 2px 3px black;
+ /* box-shadow: 0px 2px 2px rgb(243, 251, 229); */
 }
 
-#pTitle{
-    text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
+.recipeImg{
+    float: left;
+    margin-left: 1rem;
+    margin-bottom: 1rem;;
+    box-shadow: 3px 3px 4px black;
 }
-
-img{
- box-shadow: 2px 2px 4px black;
- margin-left: .5rem;
- margin-bottom: .5rem;
+ul{
+    float: left;
 }
