@@ -7,7 +7,7 @@ $(".submit-button").on('click', function (event) {
     // this block grab user input from the text box... this is then used to search the API
     var search = $("#recipes").val()
     // console.log(search)
-    var queryURL = "https://api.edamam.com/search?q=" + search + "&app_id=ef658656&app_key=7459cb2e2c002db95d605b639d3344b7&from=0&to=2&calories=591-722&health=alcohol-free"
+    var queryURL = "https://api.edamam.com/search?q=" + search + "&app_id=ef658656&app_key=7459cb2e2c002db95d605b639d3344b7&from=0&to=2&calories=591-722"
 
     $.ajax({
         url: queryURL,
@@ -27,13 +27,14 @@ $(".submit-button").on('click', function (event) {
 
                 listDiv.addClass('mainList')
                 listDiv.fadeOut(0)
-                $('#recipeList').append(listDiv)
+                $('#recipeList').prepend(listDiv)
                 p.attr("id", "pTitle")
                 
                 var recipeName = searchResponse[i].recipe.label
                 var recipe = searchResponse[i].recipe.ingredients
                 var recipeImg = searchResponse[i].recipe.image
                 var image = $("<img src='" + recipeImg + "'>")
+                image.addClass('recipeImg')
                 
                 p.attr("id", "pTitle")
                 p.text(recipeName)
@@ -50,7 +51,7 @@ $(".submit-button").on('click', function (event) {
                     label.append(newLi)
                     $(".recipeLabel").append(listDiv)
                 }
-                listDiv.fadeIn(1000)
+                listDiv.slideDown(1000)
                 
 
             }
