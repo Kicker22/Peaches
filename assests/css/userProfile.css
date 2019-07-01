@@ -41,7 +41,12 @@ header{
  color:black;
  margin-top: 1rem;
  margin-bottom: 2rem;
+ /* margin-right: auto;
+ margin-left: auto; */
  height: fit-content;
+ text-decoration-line: underline;
+ /* border-bottom: 1px solid black;
+ width: fit-content; */
  /* background:rgb(237, 250, 215); */
  text-align: center;
  /* box-shadow: 0px 2px 2px rgb(243, 251, 229); */
