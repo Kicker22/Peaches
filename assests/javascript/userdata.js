@@ -45,7 +45,11 @@ function getbmivalue() {
  console.log(newbmivalue)
  console.log(weight,height)
 
+ newbmivalue = Math.round(newbmivalue);
  document.getElementById('bmivalue').value = newbmivalue
+
+
+
 
 }
 
