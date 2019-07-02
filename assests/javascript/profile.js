@@ -91,22 +91,27 @@ $("body").on("click", "#testA", function(event) {
     
     // // console.log(this);
     // var recUrl = (searchResponse[0].recipe.uri);
-    // var nutURL = "https://api.edamam.com/api/nutrition-data?app_id=1e0daad1&app_key=5631297951d8d491e104a39d6c17a9f9&url=" + recUrl
+
+    var search = $(this).parent().find('li').text();
+     var nutURL = "https://api.edamam.com/api/nutrition-data?app_id=1e0daad1&app_key=5631297951d8d491e104a39d6c17a9f9&ingr=" + search 
 
     
 
-    //  $.ajax({
-    //      url: nutURL,
-    //       method: "GET"
-    //   })
+      $.ajax({
+          url: nutURL,
+           method: "GET"
+       })
  
-    //    .then(function (response) {
+        .then(function (response) {
             
             console.log($(this).parent().find('li').text());
+            var labelx = response.totalNutrients
+            console.log(labelx);
             
      //   });
  });
 
+});
 
 
 
@@ -132,4 +137,4 @@ $("body").on("click", "#testA", function(event) {
 //       window.location.replace("login.html");
 
 //     }
-//   });
+//   })
