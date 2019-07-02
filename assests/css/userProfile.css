@@ -11,7 +11,7 @@ header{
     font-family: 'Dancing Script', cursive;
     /* float: left; */
     width: fit-content;
-    margin: 0 ;
+    margin: 0 auto ;
 }
 .form-group{
     float: left;
@@ -19,13 +19,14 @@ header{
 }
 
 input{
+    box-shadow: 3px 3px 10px black;
     
 }
 
 .submit-button{
     background: rgb(240, 113, 113);
     color: white;
-    box-shadow: 2px 3px 3px gray;
+    box-shadow: 2px 3px 3px black;
    border-color: black;
 }
 
