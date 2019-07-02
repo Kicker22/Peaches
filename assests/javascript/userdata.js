@@ -98,3 +98,5 @@ function computeBMI() {
   // document.getElementById("answer").value = output; 
 }
 
+computeBMI()
+
