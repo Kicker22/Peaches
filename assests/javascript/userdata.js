@@ -12,23 +12,23 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
-      // ...
-    } else {
-      // User is signed out.
-      window.location.replace("login.html");
+// firebase.auth().onAuthStateChanged(function(user) {
+//     if (user) {
+//       // User is signed in.
+//       var displayName = user.displayName;
+//       var email = user.email;
+//       var emailVerified = user.emailVerified;
+//       var photoURL = user.photoURL;
+//       var isAnonymous = user.isAnonymous;
+//       var uid = user.uid;
+//       var providerData = user.providerData;
+//       // ...
+//     } else {
+//       // User is signed out.
+//       window.location.replace("login.html");
   
-    }
-  });
+//     }
+//   });
 
 
 
@@ -36,7 +36,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 var edamam = "https://api.edamam.com/search?q=chicken&app_id=ef658656&app_key=7459cb2e2c002db95d605b639d3344b7&from=0&to=3&calories=591-722&health=alcohol-free"
 
-var start = document.getElementById("#start-btn")
+var start = document.getElementById("#start-btn");
+start.addEventListener("click", start);
+
 // Create questions
 var questions ={
    question: "What's your current weight?",
@@ -80,7 +82,7 @@ function computeBMI() {
 
   //Perform calculation
 
-  //        var BMI = weight /Math.pow(height, 2)*10000;
+        var BMI = weight /Math.pow(height, 2)*10000;
   var BMI = Math.round(weight / Math.pow(height, 2) * 10000);
 
   //Display result of calculation
@@ -95,6 +97,6 @@ function computeBMI() {
       document.getElementById("comment").innerText = "Obese";
   else if (output > 30)
       document.getElementById("comment").innerText = "Overweight";
-  // document.getElementById("answer").value = output; 
+   document.getElementById("answer").value = output; 
 }
 
