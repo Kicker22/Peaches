@@ -36,7 +36,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 var edamam = "https://api.edamam.com/search?q=chicken&app_id=ef658656&app_key=7459cb2e2c002db95d605b639d3344b7&from=0&to=3&calories=591-722&health=alcohol-free"
 
-
+var start = document.getElementById("#start-btn")
 // Create questions
 var questions ={
    question: "What's your current weight?",
@@ -51,6 +51,21 @@ var questions ={
 
 // console.log(questions);
 
+// Variables that store the input of the user
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   BMI Calculator 
 function computeBMI() {
   // user inputs
   var height = Number(document.getElementById("height").value);
