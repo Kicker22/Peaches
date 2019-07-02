@@ -1,62 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Input Page</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assests/css/navBar.css">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik+Mono+One&display=swap" rel="stylesheet">
+<head>
+  <title>Input Page</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assests/css/navBar.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik+Mono+One&display=swap" rel="stylesheet">
 
 
-    <!-- Firebase Reference -->
+  <!-- Firebase Reference -->
 
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
-    </head>
-  <body>
-      
-<!-- Nav Bar goes here -->
-<div class="navbar navbar-container mb-5 py-0">
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+</head>
+
+<body>
+
+  <!-- Nav Bar goes here -->
+  <div class="navbar navbar-container mb-5 py-0">
     <div class=" brand "><img src="./assests/images/peach.png" height="50px" alt="">Peach </div>
-  <div class="navbar-link">
+    <div class="navbar-link">
       <div class="navbar-items">
-          <a class=" nav-items profile-link" href="http://">Profile</a>
-          <a class=" nav-items search-link" href="./Portfolio.html">Workouts</a>
-          <a class=" nav-items home-link" href="http://">Home</a>
+        <a class=" nav-items profile-link" href="http://">Profile</a>
+        <a class=" nav-items search-link" href="./Portfolio.html">Workouts</a>
+        <a class=" nav-items home-link" href="http://">Home</a>
       </div>
+    </div>
   </div>
-</div>
 
-<!-- Create the divs for the question and submit btn -->
-<div id="start-btn"></div>
-<div id="questions"></div>
-<div id="sumbit-btn"></div>
+  <!-- Create the divs for the question and submit btn -->
+  <div id="start-btn"></div>
+  <div id="questions"></div>
+  <div id="sumbit-btn"></div>
 
-<h1>Body Mass Index Calculator</h1>
-        <p>Enter your height: <input type="text" id="height"/>
-            <select type="multiple" id="heightunits">
-                <option value="feet" selected="selected">feet</option>
-                <option value="inches">inches</option>
-            </select>
-             </p>
-        <p>Enter your weight: <input type="text" id="weight"/>
-            <select type="multiple" id="weightunits">
-                <option value="kg" selected="selected">kilograms</option>
-                <option value="lb">pounds</option>
-            </select>
-        </p>
-        <input type="submit" value="computeBMI" onclick="computeBMI();">
-        <h1>Your BMI is: <span id="output">?</span></h1>
-        
-        <h2>This means you are: <span id="comment"> ?</span> </h2> 
+  <h1>Body Mass Index Calculator</h1>
+  <p>Enter your height: <input type="text" id="height" />
+    <select type="multiple" id="heightunits">
+      <option value="feet" selected="selected">feet</option>
+      <option value="inches">inches</option>
+    </select>
+  </p>
+  <p>Enter your weight: <input type="text" id="weight" />
+    <select type="multiple" id="weightunits">
+      <option value="kg" selected="selected">kilograms</option>
+      <option value="lb">pounds</option>
+    </select>
+  </p>
+  <input type="submit" value="computeBMI" onclick="computeBMI();">
+  <h1>Your BMI is: <span id="output">?</span></h1>
 
-<!-- Carosle Input questions  -->
-<!-- <div id="carousel" class="carousel slide" data-ride="carousel">
+  <h2>This means you are: <span id="comment"> ?</span> </h2>
+
+  <!-- Carosle Input questions  -->
+  <!-- <div id="carousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
  
@@ -84,19 +87,26 @@
 </div> -->
 
 
-<!-- Sumbit button that will go -->
+  <!-- Sumbit button that will go -->
 
 
 
-<!-- Goes to the Edamam page to look for recipes -->
+  <!-- Goes to the Edamam page to look for recipes -->
 
-   
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="assests/javascript/userdata.js"></script>
-  </body>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="assests/javascript/userdata.js"></script>
+</body>
+
 </html>

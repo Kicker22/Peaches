@@ -1,5 +1,6 @@
 body{
     background-image: url(../../assests/images/leaves.png)
+    /* background: rgb(251, 251, 251); */
 }
 .content-container{
     height: fit-content;
@@ -8,13 +9,31 @@ body{
 
 header{
     font-family: 'Dancing Script', cursive;
-    float: left;
+    /* float: left; */
     width: fit-content;
-    margin: 0;
+    margin: 0 auto ;
 }
 .form-group{
-    float: right;
+    float: left;
+    margin-bottom: 2rem;
 }
+
+input{
+    box-shadow: 3px 3px 10px black;
+    
+}
+
+.submit-button{
+    background: rgb(240, 113, 113);
+    color: white;
+    box-shadow: 2px 3px 3px black;
+   border-color: black;
+}
+
+.submit-button:hover{
+    background:  rgb(243, 251, 229);
+}
+
 
 #recipeList{
    display: inline;
@@ -33,6 +52,7 @@ header{
     box-shadow: 8px 8px 15px gray;
     margin-bottom: 2rem;
     background: white;
+    /* background-image: url(../../assests/images/leaves.png) */
 }
 
  
