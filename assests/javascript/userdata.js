@@ -48,28 +48,16 @@ function getbmivalue() {
  newbmivalue = Math.round(newbmivalue);
  document.getElementById('bmivalue').value = newbmivalue
 
-
-
-
+ 
 }
+$('.chart').fadeOut(0)
+
+$(".btn").on("click", function(){
+  $('.chart').fadeIn(1000)
+})
 
 
 
-// Create questions
-// var questions ={
-//    question: "What's your current weight?",
-//    question1: "What's your level of excercise?", 
-//    question2: "Would you like to lose weight or bulk up?", 
-//    question3: "How frequently are you planning to work out?",
-//    question4: "How much weight would you like to lose?",
-//    question5: "What is your preferred diet?",
-
-// },
-
-
-// console.log(questions);
-
-// Variables that store the input of the user
 
 
 
