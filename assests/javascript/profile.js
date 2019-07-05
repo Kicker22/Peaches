@@ -130,8 +130,6 @@ $("body").on("click", "#testA", function(event) {
             var ji1 = ("<section class='performance-facts'> \
             <header class='performance-facts__header'> \
               <h1 class='performance-facts__title'>Nutrition Facts</h1> \
-              <p>Serving Size 1/2 cup (about 82g) </p> \
-              <p>Serving Per Container 8</p> \
             </header> \
             <table class='performance-facts__table'>  \
               <thead> \
@@ -210,6 +208,21 @@ $("body").on("click", "#testA", function(event) {
             <td colspan='2'> \
               Vitamin A  \ "
             var xi10 = ((perDaily.VITA_RAE.quantity) + "%")
+            var ji11 = " </td>    \
+            <td> \
+              Vitamin C  \ "
+            var xi11 = ((perDaily.VITC.quantity) + "%")
+            var ji12 = " </td>    \
+            </tr>  \
+            <tr class='thin-end'>  \
+              <td colspan='2'> \
+                Calcium    \ "
+            var xi12 = ((perDaily.CA.quantity) + "%")
+            var ji13 = " </td>    \
+            <td> \
+              Iron   \ "
+            var xi13 = ((perDaily.FE.quantity) + "%")
+
 
  nutDiv.addClass('nutList');
              nutDiv.append(parG);
@@ -217,35 +230,8 @@ $("body").on("click", "#testA", function(event) {
             
             
              $(".mainList").append(nutDiv);
-             parG.html( ji1 + xi1 + ji2 + xi2 + ji3 + xi3 + ji4 + xi4 + ji5 + xi5 + ji6 + xi6 + ji7 + xi7 + ji8 + xi8 + ji9 + xi9 + ji10 + xi10 +
-
-                  " </th>    \
-                   <td> \
-                   </td>    \
-                 </tr>  \
-               </tbody> \
-             </table>   \
-             <table class='performance-facts__table--grid'> \
-               <tbody>  \
-                 <tr>   \
-                   <td colspan='2'> \
-                     Vitamin A  \
-                     10%    \
-                   </td>    \
-                   <td> \
-                     Vitamin C  \
-                     0% \
-                   </td>    \
-                 </tr>  \
-                 <tr class='thin-end'>  \
-                   <td colspan='2'> \
-                     Calcium    \
-                     10%    \
-                   </td>    \
-                   <td> \
-                     Iron   \
-                     6% \
-                   </td>    \
+             parG.html( ji1 + xi1 + ji2 + xi2 + ji3 + xi3 + ji4 + xi4 + ji5 + xi5 + ji6 + xi6 + ji7 + xi7 + ji8 + xi8 + ji9 + xi9 + ji10 + xi10 + ji11 + xi11 + ji12 + xi12 + ji13 + xi13 +
+                " </td>    \
                  </tr>  \
                </tbody> \
              </table>   \
