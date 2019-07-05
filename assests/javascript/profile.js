@@ -83,6 +83,21 @@ $(".submit-button").on('click', function (event) {
 
 })
 console.log(inglist);
+//appends an "active" class to .popup and .popup-content when the "Open" button is clicked
+
+
+
+// $(".open").on("click", function() {
+//     $(".popup-overlay, .popup-content").addClass("active");
+//   });
+  
+//   //removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+//   $(".close, .popup-overlay").on("click", function() {
+//     $(".popup-overlay, .popup-content").removeClass("active");
+//   });
+
+
+
 
 $("body").on("click", "#testA", function(event) {
     event.preventDefault();
@@ -106,11 +121,196 @@ $("body").on("click", "#testA", function(event) {
             
             console.log($(this).parent().find('li').text());
             var labelx = response.totalNutrients
+            var perDaily = response.totalDaily
+            var calsFrom = response.totalNutrientsKCal
             console.log(labelx);
-            
-     //   });
- });
+            console.log(response);
+             var nutDiv = $('<div>');
+             var parG = $('<p>');
+            var ji1 = ("<section class='performance-facts'> \
+            <header class='performance-facts__header'> \
+              <h1 class='performance-facts__title'>Nutrition Facts</h1> \
+              <p>Serving Size 1/2 cup (about 82g) </p> \
+              <p>Serving Per Container 8</p> \
+            </header> \
+            <table class='performance-facts__table'>  \
+              <thead> \
+                <tr> \
+                  <th colspan='3' class='small-info'> \
+                    Amount Per Serving \
+                  </th> \
+                </tr> \
+              </thead> \
+              <tbody> \
+                <tr> \
+                  <th colspan='2'> \
+                    <b>Calories</b> ")
+                    var xi1 = ((labelx.ENERC_KCAL.quantity) + "<th>");
 
+            var ji2 = " <td> \
+                     Calories from Fat \ "
+            var xi2 = ((calsFrom.FAT_KCAL.quantity) + "</td>" );
+
+            var ji3 =  "</tr> \
+            <tr class='thick-row'> \
+              <td colspan='3' class='small-info'> \
+                <b>% Daily Value*</b> \ "
+            var xi3 = perDaily.ENERC_KCAL.quantity
+
+            var ji4 = " </td> \
+            </tr> \
+            <tr> \
+              <th colspan='2'>  \
+                <b>Total Fat</b>   \ "
+            var xi4 = ((labelx.FAT.quantity) + "g");
+
+            var ji5 = " </th>    \
+            </tr>  \
+            <tr>   \
+              <td class='blank-cell'>  \
+              </td>    \
+              <th>     \
+                Saturated Fat  \ "
+            var xi5 = ((labelx.FASAT.quantity) + "g");
+            var ji6 = " </th>    \
+            </tr>  \
+            <tr>   \
+              <td class='blank-cell'>  \
+              </td>    \
+              <th>     \
+                Trans Fat  \ "
+            var xi6 = ((labelx.FATRN.quantity) + "g")
+            var ji7 = " </th>    \
+            <td> \
+            </td>    \
+          </tr>  \
+          <tr>   \
+            <th colspan='2'> \
+              <b>Cholesterol</b> \ "
+            var xi7 = ((labelx.CHOLE.quantity) + "mg")
+            var ji8 = " </th>    \
+            </tr>  \
+            <tr>   \
+              <th colspan='2'> \
+                <b>Sodium</b>  \ "
+            var xi8 = ((labelx.NA.quantity) + "mg")
+            var ji9 = "<tr class='thick-end'> \
+            <th colspan='2'> \
+              <b>Protein</b> \ "
+            var xi9 = ((labelx.PROCNT.quantity) + "g")
+            var ji10 = " </th>    \
+            <td> \
+            </td>    \
+          </tr>  \
+        </tbody> \
+      </table>   \
+      <table class='performance-facts__table--grid'> \
+        <tbody>  \
+          <tr>   \
+            <td colspan='2'> \
+              Vitamin A  \ "
+            var xi10 = ((perDaily.VITA_RAE.quantity) + "%")
+
+ nutDiv.addClass('nutList');
+             nutDiv.append(parG);
+            
+            
+            
+             $(".mainList").append(nutDiv);
+             parG.html( ji1 + xi1 + ji2 + xi2 + ji3 + xi3 + ji4 + xi4 + ji5 + xi5 + ji6 + xi6 + ji7 + xi7 + ji8 + xi8 + ji9 + xi9 + ji10 + xi10 +
+
+                  " </th>    \
+                   <td> \
+                   </td>    \
+                 </tr>  \
+               </tbody> \
+             </table>   \
+             <table class='performance-facts__table--grid'> \
+               <tbody>  \
+                 <tr>   \
+                   <td colspan='2'> \
+                     Vitamin A  \
+                     10%    \
+                   </td>    \
+                   <td> \
+                     Vitamin C  \
+                     0% \
+                   </td>    \
+                 </tr>  \
+                 <tr class='thin-end'>  \
+                   <td colspan='2'> \
+                     Calcium    \
+                     10%    \
+                   </td>    \
+                   <td> \
+                     Iron   \
+                     6% \
+                   </td>    \
+                 </tr>  \
+               </tbody> \
+             </table>   \
+              <p class='small-info'>* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p> \
+             <table class='performance-facts__table--small small-info'> \
+               <thead>  \
+                 <tr>   \
+                   <td colspan='2'></td>    \
+                   <th>Calories:</th>   \
+                   <th>2,000</th>   \
+                   <th>2,500</th>   \
+                 </tr>  \
+               </thead> \
+               <tbody>  \
+                 <tr>   \
+                   <th colspan='2'>Total Fat</th>   \
+                   <td>Less than</td>   \
+                   <td>65g</td> \
+                   <td>80g</td> \
+                 </tr>  \
+                 <tr>   \
+                   <td class='blank-cell'></td> \
+                   <th>Saturated Fat</th>   \
+                   <td>Less than</td>   \
+                   <td>20g</td> \
+                   <td>25g</td> \
+                 </tr>  \
+                 <tr>   \
+                   <th colspan='2'>Cholesterol</th> \
+                   <td>Less than</td>   \
+                   <td>300mg</td>   \
+                   <td>300 mg</td>  \
+                 </tr>  \
+                 <tr>   \
+                   <th colspan='2'>Sodium</th>  \
+                   <td>Less than</td>   \
+                   <td>2,400mg</td> \
+                   <td>2,400mg</td> \
+                 </tr>  \
+                 <tr>   \
+                   <th colspan='3'>Total Carbohydrate</th>  \
+                   <td>300g</td>    \
+                   <td>375g</td>    \
+                 </tr>  \
+                 <tr>   \
+                   <td class='blank-cell'></td> \
+                   <th colspan='2'>Dietary Fiber</th>   \
+                   <td>25g</td> \
+                   <td>30g</td> \
+                 </tr>  \
+               </tbody> \
+             </table>   \
+             <p class='small-info'>Calories per gram:</p> \
+             <p class='small-info text-center'> \
+               Fat 9 \
+               &bull; \
+               Carbohydrate 4 \
+               &bull; \
+               Protein 4 \
+             </p> \
+             </section> ");
+             
+             
+
+        });
 });
 
 
