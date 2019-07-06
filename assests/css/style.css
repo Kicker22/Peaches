@@ -4,6 +4,12 @@
 }
 
 .chart{
-    width: 20rem;
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 40rem;
+}
 
+.card-body{
+    
 }
