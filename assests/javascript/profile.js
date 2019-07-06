@@ -11,7 +11,7 @@ $(".submit-button").on('click', function (event) {
   // this block grab user input from the text box... this is then used to search the API
   var search = $("#recipes").val()
   // console.log(search)
-  var queryURL = "https://api.edamam.com/search?q=" + search + "&app_id=ef658656&app_key=7459cb2e2c002db95d605b639d3344b7&from=0&to=2&calories=591-722"
+  var queryURL = "https://api.edamam.com/search?q=" + search + "&app_id=ef658656&app_key=7459cb2e2c002db95d605b639d3344b7&from=0&to=3&calories=591-722"
 
   $.ajax({
     url: queryURL,
