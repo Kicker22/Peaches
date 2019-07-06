@@ -107,10 +107,13 @@ $(".submit-button").on('click', function (event) {
         .then(function (response) {
           var labelx = response.totalNutrients
           var calsFrom = response.totalNutrientsKCal
+          var perDaily = response.totalDaily
           var nutDiv = $('<div>');
           nutDiv.addClass('nLabel')
           var parG = $('<p>');
          
+          console.log(response);
+
           var ji1 = ("<section class='performance-facts'> \
                 <header class='performance-facts__header'> \
                   <h1 class='performance-facts__title'>Nutrition Facts</h1> \
@@ -129,14 +132,15 @@ $(".submit-button").on('click', function (event) {
                         <b>Calories</b> ")
           var xi1 = ((calsFrom.ENERC_KCAL.quantity) + "<th>");
     
-          var ji2 = " <td> \
+          var ji2 = " <tr> <td> \
                          Calories from Fat \ "
-          var xi2 = ((calsFrom.FAT_KCAL.quantity) + "</td>");
+          var xi2 = ((calsFrom.FAT_KCAL.quantity) + "</td></tr>");
     
           var ji3 = "</tr> \
-          //       <tr class='thick-row'> \
-          //         <td colspan='3' class='small-info'> \
-          //           <b>% Daily Value*</b> \ "
+                <tr class='thick-row'> \
+                   <td colspan='3' class='small-info'> \
+                     <b>% Daily Value*</b> \ "
+          var xi3 = ((perDaily.ENERC_KCAL.quantity) + "%");
     
           var ji4 = " </td> \
                 </tr> \
@@ -175,10 +179,10 @@ $(".submit-button").on('click', function (event) {
           //         <th colspan='2'> \
           //           <b>Sodium</b>  \ "
           // var xi8 = ((calsFrom.NA_KCAL.quantity) + "mg")
-          // var ji9 = "<tr class='thick-end'> \
-          //       <th colspan='2'> \
-          //         <b>Protein</b> \ "
-          // var xi9 = ((calsFrom.PROCNT_KCAL.quantity) + "g")
+          var ji9 = "<tr class='thick-end'> \
+                <th colspan='2'> \
+                  <b>Protein</b> \ "
+          var xi9 = ((calsFrom.PROCNT_KCAL.quantity) + "g")
           // var ji10 = " </th>    \
           //       <td> \
           //       </td>    \
@@ -211,7 +215,7 @@ $(".submit-button").on('click', function (event) {
           $('.modal-body').empty('')
           $('#modalLabel').text(name)
           $('.modal-body').append(nutDiv)  
-          parG.html(ji1 + xi1 + ji2 + xi2 + ji3 + ji4 + xi4 + ji5 + xi5 + 
+          parG.html(ji1 + xi1 + ji2 + xi2 + ji3 + xi3 + ji4 + xi4 + ji5 + xi5 + ji9 + xi9 +
             " </td>    \
                      </tr>  \
                    </tbody> \
