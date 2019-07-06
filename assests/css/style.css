@@ -1,9 +1,265 @@
-.body{
+body{
     background-image: url(../../assests/images/leaves.png)
     /* background: rgb(251, 251, 251); */
 }
-
-.chart{
-    width: 20rem;
-
+.content-container{
+    height: fit-content;
+    clear: both;
 }
+
+header{
+    font-family: 'Dancing Script', cursive;
+    /* float: left; */
+    width: fit-content;
+    margin: 0 auto ;
+}
+.form-group{
+    float: left;
+    margin-bottom: 2rem;
+}
+
+input{
+    box-shadow: 3px 3px 10px black;
+    
+}
+
+.modal-header{
+  background: rgb(255,175,140);
+  box-shadow:0px 3px 10px black;
+}
+
+
+.close-btn{
+  background: rgb(243, 251, 229);
+  color: black;
+}
+
+.submit-button{
+    background: rgb(240, 113, 113);
+    color: white;
+    box-shadow: 2px 3px 3px black;
+   border-color: black;
+}
+
+.submit-button:hover{
+    background:  rgb(243, 251, 229);
+}
+
+
+#recipeList{
+   display: inline;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+
+
+.mainList{
+    overflow: auto;
+    margin: 0 auto;
+    margin-right: 2rem;
+    border: 1rem solid  rgb(237, 252, 211);
+    border-radius: 5px;
+    box-shadow: 8px 8px 15px gray;
+    margin-bottom: 2rem;
+    background: white;
+    /* background-image: url(../../assests/images/leaves.png) */
+}
+
+.nutList{
+  float: right;
+}
+
+ 
+#pTitle{
+ font-size: 36px;
+ color:black;
+ margin-top: 1rem;
+ margin-bottom: 2rem;
+ /* margin-right: auto;
+ margin-left: auto; */
+ height: fit-content;
+ text-decoration-line: underline;
+ /* border-bottom: 1px solid black;
+ width: fit-content; */
+ /* background:rgb(237, 250, 215); */
+ text-align: center;
+ /* box-shadow: 0px 2px 2px rgb(243, 251, 229); */
+}
+
+/* footer{
+
+  background:rgb(255,175,140);
+  border-top: 1rem solid rgb(203,245,158);
+  margin-top: 3rem;
+  height: 4rem;
+} */
+
+.recipeImg{
+    float: left;
+    margin-left: 1rem;
+    margin-bottom: 1rem;;
+    box-shadow: 3px 3px 4px black;
+}
+ul{
+    float: left;
+}
+
+@import "compass/css3";
+
+.image {
+  width: 250px;
+  float: left;
+  margin: 20px;
+}
+body {
+  font-size: small;
+  line-height: 1.4;
+}
+p {
+  margin: 0;
+}
+
+.performance-facts {
+  border: 1px solid black;
+  margin: 20px;
+  float: left;
+  width: 280px;
+  padding: 0.5rem;
+  /* table {
+    border-collapse: collapse;
+  } */
+}
+.performance-facts__title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+}
+.performance-facts__header {
+  border-bottom: 10px solid black;
+  padding: 0 0 0.25rem 0;
+  margin: 0 0 0.5rem 0;
+  /* p {
+    margin: 0;
+  } */
+}
+.performance-facts__table {
+  width: 100%;
+  /* thead tr {
+    th, td {
+      border: 0;
+    } */
+  }
+  th, td {
+    font-weight: normal;
+    text-align: left;
+    padding: 0.25rem 0;
+    border-top: 1px solid black; 
+    white-space: nowrap;
+  }
+  /* td {
+    &:last-child {
+      text-align: right;
+    }
+  } */
+  .blank-cell {
+    width: 1rem;
+    border-top: 0;
+  }
+  /* .thick-row {
+    th, td {
+      border-top-width: 5px;
+    }
+  }
+} */
+.small-info {
+  font-size: 0.7rem;
+}
+/* 
+.performance-facts__table--small {
+  @extend .performance-facts__table;
+  border-bottom: 1px solid #999;
+  margin: 0 0 0.5rem 0;
+  thead {
+    tr {
+      border-bottom: 1px solid black; 
+    }
+  }
+  td {
+    &:last-child {
+      text-align: left;
+    }
+  }
+  th, td {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.performance-facts__table--grid {
+  @extend .performance-facts__table;
+  margin: 0 0 0.5rem 0;
+  td {
+    &:last-child {
+      text-align: left;
+      &::before {
+        content: "•";
+        font-weight: bold;
+        margin: 0 0.25rem 0 0;
+      }
+    }
+  }
+} */
+
+.text-center {
+  text-align: center;
+}
+.thick-end {
+  border-bottom: 10px solid black;
+}
+.thin-end {
+  border-bottom: 1px solid black;
+}
+.popup-overlay {
+    /*Hides pop-up when there is no "active" class*/
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px solid #666666;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+  }
+  
+  .popup-overlay.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    text-align: center;
+  }
+  
+  .popup-content {
+    /*Hides pop-up content when there is no "active" class */
+    visibility: hidden;
+  }
+  
+  .popup-content.active {
+    /*Shows pop-up content when "active" class is present */
+    visibility: visible;
+  }
+  
+  .newbtt {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 30px;
+    margin: .20rem;
+    font-size: 1rem;
+    color: #666666;
+    background: #ffffff;
+    border: 1px solid #666666;
+  }
+  
+  .newbtt:hover {
+    border: 1px solid #666666;
+    background: #666666;
+    color: #ffffff;
+  }
