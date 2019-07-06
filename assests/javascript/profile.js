@@ -31,10 +31,12 @@ $(".submit-button").on('click', function (event) {
         //     console.log(response);
         //     console.log(searchResponse);
         var button = $("<button>");
+    
+        //adding attr to our buttons
         button.attr("id", "testA")
         button.attr('data-toggle','modal')
         button.attr('data-target','#exampleModal')
-        button.addClass('nutritionBtn btn btn-lg btn-primary');
+        button.addClass('nutritionBtn btn btn-lg btn-primary mb-3');
         button.text('Get nutrition info');
 
         listDiv.addClass('mainList')
@@ -42,11 +44,14 @@ $(".submit-button").on('click', function (event) {
         $('#recipeList').prepend(listDiv)
         p.attr("id", "pTitle")
 
+        // var created to shorthad ref our data-base
         var recipeName = searchResponse[i].recipe.label
+        var recUrl = searchResponse[i].recipe.url
         var recipe = searchResponse[i].recipe.ingredients
-        // $(inglist).push(recipe);
         var recipeImg = searchResponse[i].recipe.image
         var image = $("<img src='" + recipeImg + "'>")
+        var recUrlDiv = $('<a href='+recUrl+'></a>')
+        recUrlDiv.text(recUrl)
         image.addClass('recipeImg')
 
         p.attr("id", "pTitle")
@@ -54,17 +59,19 @@ $(".submit-button").on('click', function (event) {
         listDiv.attr('id', 'list_' + i)
         listDiv.append(p)
         listDiv.append(image)
+        // listDiv.append(recUrlDiv)
 
         var label = $('<ul>')
         label.append(button);
         $(listDiv).append(label)
         // this .parent . find .li .text
 
-
+        //for loop to create the recipe list <li>
         for (let j = 0; j < recipe.length; j++) {
           var newLi = $('<li>')
           newLi.text(recipe[j].text)
           label.append(newLi)
+          label.append(recUrlDiv)
           $(".recipeLabel").append(listDiv)
 
         }
