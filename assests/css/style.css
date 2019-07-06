@@ -23,6 +23,11 @@ input{
     
 }
 
+
+
+.card-body{
+    
+}
 .modal-header{
   background: rgb(255,175,140);
   box-shadow:0px 3px 10px black;

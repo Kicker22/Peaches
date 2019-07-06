@@ -9,9 +9,11 @@
 }
 
 .chart{
-    border: 1px solid black;
-    box-shadow: 3px 3px 10px black;
-    width: 800px;
+
+        position: relative;
+        left: 0;
+        right: 0;
+        width: 40rem;
 }
 
 footer{
