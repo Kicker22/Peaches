@@ -9,17 +9,9 @@
 }
 
 .chart{
-
+        border: 1px solid black;
         position: relative;
         left: 0;
         right: 0;
         width: 40rem;
-}
-
-footer{
-
-    background:rgb(255,175,140);
-    border-top: 1rem solid rgb(203,245,158);
-    margin-top: 3rem;
-    height: 4rem;
 }
